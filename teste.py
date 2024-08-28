@@ -51,9 +51,9 @@ with col1:
         novo_valor = int(valor) * 0.05
         economia = int(valor) - float(novo_valor)
         economia_ano = economia * 12
-        st.markdown (f'Após a instalação, sua conta de luz seria de R${novo_valor:.2f} por mês')
-        st.markdown (f'Você economizaria R${float(economia):.2f} por mês')
-        st.markdown (f'Você economizaria R${float(economia_ano):.2f} por ano')
+        st.markdown (f'Após a instalação, sua conta de luz seria de :red-background[R${novo_valor:.2f}] por mês')
+        st.markdown (f'Você economizaria :green-background[R${float(economia):.2f}] por mês')
+        st.markdown (f'Você economizaria :green-background[R${float(economia_ano):.2f}] por ano')
 
 
 #PRODUÇÃO PAINEIS SOLARES
@@ -66,7 +66,7 @@ with col1:
     with st.container():
         st.subheader('Instalação')
         valor_KwH = st.number_input("Valor gasto por mês em kWh, em média", value=0)
-        st.markdown(f"Uma placa solar de 330W produz {enegia_mes:.2f}kWh/mês")
+        st.markdown(f'''Uma placa solar de 330W produz :red-background[{enegia_mes:.2f}kWh/mês]''')
         quantidade_placa = valor_KwH//enegia_mes + 1
         st.markdown(f"Seriam necessárias {int(quantidade_placa)} placas solares")
 
@@ -79,20 +79,20 @@ with col1:
             gerador = kWh_dia // 4.5 + 1 #gasto diario pela incidencia de sol (kWp)
             st.markdown(f"Seu sistema necessitara de geradores com {int(gerador)}kWp")
             if gerador <= 2:
-                st.markdown(f"O investimento ficaria em torno de R$7.740,00")
+                st.markdown(f"O investimento ficaria em torno de :red-background[R$7.740,00]")
                 custo = 7740
                 retorno_ano = custo// int(economia_ano)
-                st.markdown(f"Levariam {retorno_ano + 1} anos para pagar os custos do investimento com as economias da instalação")
+                st.markdown(f"Levariam :green-background[{retorno_ano + 1} anos] para pagar os custos do investimento com as economias da instalação")
             if gerador > 2 and gerador <= 4:
-                st.markdown(f"O investimento ficaria em torno de R$12.680,00")
+                st.markdown(f"O investimento ficaria em torno de :red-background[R$12.680,00]")
                 custo = 12680
                 retorno_ano = custo// int(economia_ano)
-                st.markdown(f"Levariam {retorno_ano + 1} anos para pagar os custos do investimento com as economias da instalação")
+                st.markdown(f"Levariam :green-background[{retorno_ano + 1} anos] para pagar os custos do investimento com as economias da instalação")
             if gerador > 4 and gerador <= 8:
-                st.markdown(f"O investimento ficaria em torno de R$21.360,00")
+                st.markdown(f"O investimento ficaria em torno de :red-background[R$21.360,00]")
                 custo = 21360
                 retorno_ano = custo// int(economia_ano)
-                st.markdown(f"Levariam {retorno_ano + 1} anos para pagar os custos do investimento com as economias da instalação")
+                st.markdown(f"Levariam :green-background[{retorno_ano + 1} anos] para pagar os custos do investimento com as economias da instalação")
         else:
             with st.container():
                 st.markdown('''**Preencha todos os campos acima!**''')
