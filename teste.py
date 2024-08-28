@@ -8,8 +8,7 @@ st.set_page_config(
     page_icon="☀️"
 )
 col1, col2 = st.columns(2, gap='large')
-with open("style.css", encoding="utf8") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 
 #SIDEBAR 
 with st.container():
