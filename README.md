@@ -13,11 +13,11 @@ O programa foi construido na linguagem Python voltado para criar um site por mei
 ## Pré-Requisitos
 Do que você precisa antes de abrir o código:
 
-Python
-
-Baixar o streamlit:
-```
-pip install streamlit
-```
+  - Python
+  
+  - Baixar o streamlit:
+  ```
+  pip install streamlit
+  ```
 
 ## Execução
