@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calcuadora Solar</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+
+    <nav class="navbar">
+
+      <div class="logo">
+        ☀️ SunInvest
+      </div>
+
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#grafico">Gráfico</a>
+        <a href="#fontes">Fontes</a>
+      </div>
+
+    </nav>
+
+    <div class="hero-content">
+
+      <div class="hero-text">
+
+
+        <h1>
+          Descubra quanto você pode economizar com energia solar
+        </h1>
+
+        <p>
+          Simule os custos, a quantidade de placas necessárias
+          e o tempo estimado de retorno do investimento.
+        </p>
+
+        <a href="#calculadora" class="hero-button">
+          Fazer Simulação
+        </a>
+
+      </div>
+
+      <div class="hero-image">
+
+        <div class="solar-card">
+          <h3>⚡ Economia média</h3>
+          <strong>90%</strong>
+          <p>de redução na conta de energia</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+<!-- SOBRE -->
+
+<section class="info-section" id="sobre">
+
+    <div class="info-card">
+  
+      <div class="info-icon">
+        🌎
+      </div>
+  
+      <h2>Objetivo</h2>
+  
+      <p>
+        O projeto busca conscientizar sobre os benefícios
+        financeiros e ambientais da energia solar.
+      </p>
+  
+    </div>
+  
+    <div class="info-card">
+  
+      <div class="info-icon">
+        🔋
+      </div>
+  
+      <h2>Processamento</h2>
+  
+      <p>
+        Os cálculos utilizam consumo mensal, potência de placas
+        solares de 550W e média de incidência solar.
+      </p>
+  
+    </div>
+  
+    <div class="info-card">
+  
+      <div class="info-icon">
+        📈
+      </div>
+  
+      <h2>Benefícios</h2>
+  
+      <p>
+        Economia na conta de luz, valorização do imóvel
+        e sustentabilidade ambiental.
+      </p>
+  
+    </div>
+  
+  </section>
+  
+  <section class="calculator-section" id="calculadora">
+
+    <div class="calculator-card">
+
+      <h2>Calculadora Solar</h2>
+
+      <div class="input-group">
+
+        <label>
+          Valor da conta de luz mensal (R$)
+        </label>
+
+        <input
+          type="number"
+          id="valorConta"
+          placeholder="Ex: 311"
+        >
+
+      </div>
+
+      <div class="input-group">
+
+        <label>
+          Consumo médio mensal (kWh)
+        </label>
+
+        <input
+          type="number"
+          id="valorKwh"
+          placeholder="Ex: 261"
+        >
+
+      </div>
+
+      <div class="results-grid">
+
+        <div class="result-box featured">
+          <span>Investimento inicial</span>
+          <h3 id="investimento">R$ 0,00</h3>
+        </div>
+
+        <div class="result-box featured">
+          <span>Economia anual</span>
+          <h3 id="economiaAno">R$ 0,00</h3>
+        </div>
+
+        <div class="result-box">
+          <span>Espaço reservado</span>
+          <h3 id="espaco">0m²</h3>
+        </div>
+
+        <div class="result-box">
+          <span>Conta após instalação</span>
+          <h3 id="novaConta">R$ 0,00</h3>
+        </div>
+
+        <div class="result-box">
+          <span>Quantidade de placas</span>
+          <h3 id="placas">0</h3>
+        </div>
+
+        <div class="result-box">
+          <span>Retorno estimado</span>
+          <h3 id="retorno">0 anos</h3>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section class="calculator-section" id="grafico">
+    <div class="calculator-card">
+        <h2>Gráfico de Economias</h2>
+        <p id="chart-subtitle"> A projeção leva em conta um reajuste anual de 4% na tarifa de energia elétrica, o que potencializa as economias com a instalação de sistemas fotovoltaicos.</p>
+
+        <canvas id="paybackChart"></canvas>
+    </div>
+  </section>
+  
+  <footer class="footer" id="fontes">
+
+    <div class="footer-links">
+
+      <a
+        href="https://www.portalsolar.com.br/quanto-custa-para-instalar-energia-solar.html"
+        target="_blank"
+      >
+        Portal Solar
+      </a>
+
+      <a
+        href="https://www.portalsolar.com.br/gerador-de-energia-solar.html"
+        target="_blank"
+      >
+        Gerador Solar
+      </a>
+
+      <a
+        href="https://blog.solfacil.com.br/energia-solar/como-calcular-o-kwp-de-um-sistema-fotovoltaico/"
+        target="_blank"
+      >
+        Sol Fácil
+      </a>
+
+    </div>
+
+    <p class="copyright">
+      Projeto desenvolvido para o PDFest2026
+    </p>
+
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
